@@ -1,8 +1,15 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+
 * {
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
-	font-family: 'Roboto Condensed', sans-serif;
+    
+
+
 }
 img {
 	max-width: 100%;
@@ -15,6 +22,82 @@ marquee{
     background: #f8f9fa;
     margin-top: 5px;
     border-bottom: 5px solid;}
+    header{
+    background-image: linear-gradient(to bottom right, #0c0606, #1d1d0d);
+}
+header .navbar .navbar-nav .nav-link{
+    font-size: 30px;
+    margin-left: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+    letter-spacing: 0.9px;
+    text-shadow: 1px 3px #e6d9d9;
+}
+header .navbar .navbar-nav .nav-link:hover{
+    color: transparent;
+
+}
+.about-us{
+    margin: 20px 0px 30px 0px;
+
+    
+}
+.about-us h1{
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 15px;
+
+}
+.about-us p{
+    font-size: 25px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #0c0505;
+    font-weight: 500;
+}
+.about-us a{
+    font-size: 25px;
+    background: red;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.page {
+    margin: 70px 0px 30px 0px;
+    text-align: center;
+
+}
+
+.page .page-bx i{
+    font-size: 150px;
+    text-align: center;
+    
+}
+
+.page .page-bx h1{
+    font-size: 50px;
+    margin: 20px 0px 20px 0px;
+    
+}
+.page .page-bx h2{
+    font-size: 50px;
+
+    
+}
+
+element.style {
+}
+.scroll-btn {
+    position: fixed;
+    bottom: 50px;
+    right: -3px;
+    width: 50px;
+    transform: rotate(-89deg);
+}
+
 .about-img,
 .form-left{
 -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
@@ -26,6 +109,7 @@ box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
 }
 footer {
     background: #000;
+    background:url('');
     padding: 20px 0px;
 }
 footer .foter-bx h2 {
