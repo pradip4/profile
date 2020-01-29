@@ -1,5 +1,7 @@
 body{
     font-family: 'Roboto', sans-serif;
+    cursor: url(pradip-cursor.png), auto;
+    
 }
 
 
@@ -21,10 +23,14 @@ marquee{
     text-align: center;
     background: #f8f9fa;
     margin-top: 5px;
-    border-bottom: 5px solid;}
-    header{
-    background-image: linear-gradient(to bottom right, #0c0606, #1d1d0d);
+    border-bottom: 5px solid;
 }
+    header{
+        background: linear-gradient(170deg, rgb(245, 16, 16) 36%, #FFC107 103%);
+}
+
+
+
 header .navbar .navbar-nav .nav-link{
     font-size: 30px;
     margin-left: 20px;
@@ -32,6 +38,12 @@ header .navbar .navbar-nav .nav-link{
     font-weight: 700;
     letter-spacing: 0.9px;
     text-shadow: 1px 3px #e6d9d9;
+}
+header .navbar .navbar-nav .nav-link:hover{
+    text-shadow: 1px 0px #e6d9d9;
+    color: #0e0bce !important;
+
+
 }
 header .navbar .navbar-nav .nav-link:hover{
     color: transparent;
@@ -46,6 +58,8 @@ header .navbar .navbar-nav .nav-link:hover{
     font-size: 70px;
     font-weight: bold;
     margin-bottom: 15px;
+    color: #ef3d08;
+
 
 }
 .about-us p{
@@ -66,8 +80,10 @@ header .navbar .navbar-nav .nav-link:hover{
     text-decoration: none;
 }
 .page {
-    margin: 70px 0px 30px 0px;
+    margin: 70px 0px 0px 0px;
+    padding: 30px 0px;
     text-align: center;
+    background: #bb2a2a4d;
 
 }
 
@@ -92,10 +108,10 @@ element.style {
 }
 .scroll-btn {
     position: fixed;
-    bottom: 50px;
-    right: -3px;
+    bottom: 30px;
+    right: 0px;
     width: 50px;
-    transform: rotate(-89deg);
+    display: none;
 }
 
 .about-img,
@@ -109,24 +125,45 @@ box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
 }
 footer {
     background: #000;
-    background:url('');
-    padding: 20px 0px;
+    padding: 30px 0px;
 }
 footer .foter-bx h2 {
     font-size: 30px;
     color: #fff;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 footer .foter-bx ul li {
     list-style: none;
+    line-height: 2.5em;
+
 }
 footer .foter-bx ul li a {
     list-style: none;
     text-decoration: none;
     line-height: 2em;
-    color: #3506f1;
+    font-size: 18px;
+    color: #e8dada;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-left: 10px;
+    letter-spacing: 0.5px;
+
 }
+
+footer .foter-bx ul li i {
+    color: #abacca;
+    font-size: 21px;
+    text-align: center;
+}
+footer .foter-bx ul li a:hover {
+    color: red;
+}
+footer .foter-bx ul li i:hover {
+    color: red;
+}
+
+
 .form-left {
     padding: 20px 0px;
 }
