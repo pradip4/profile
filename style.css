@@ -173,3 +173,9 @@ footer .foter-bx ul li i:hover {
 .form-left {
     padding: 20px 0px;
 }
+
+@ media screen and (max-width:767px) {
+	.d-sm-none {
+    display: none;
+}
+}
