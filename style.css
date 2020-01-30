@@ -174,8 +174,8 @@ footer .foter-bx ul li i:hover {
     padding: 20px 0px;
 }
 
-@ media screen and (max-width:767px) {
+@media screen and (max-width:767px) {
 	.d-sm-none {
-    display: none;
+    display: none !important;
 }
 }
