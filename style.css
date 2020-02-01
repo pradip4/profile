@@ -1,76 +1,72 @@
 body{
     font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
     cursor: url(pradip-cursor.png), auto;
+    }
     
-}
-
-
-* {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
-    
-
-
-}
-img {
-	max-width: 100%;
-}
-.clr {
-	clear: both;
-}
-marquee{
+    #home,
+    #projectid,
+    #formid,
+    #aboutid,
+    html{
+    scroll-behavior: smooth;
+    }
+    * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    }
+    img {
+    max-width: 100%;
+    }
+    .clr {
+    clear: both;
+    }
+    marquee{
     text-align: center;
-    background: #f8f9fa;
-    margin-top: 5px;
+    background: #f9f9fb;
+    padding: 10px 0px 10px 0px;
+    margin-bottom: -6px;
     border-bottom: 5px solid;
-}
+    }
     header{
-        background: linear-gradient(170deg, rgb(245, 16, 16) 36%, #FFC107 103%);
-}
-
-
-
-header .navbar .navbar-nav .nav-link{
+    background: linear-gradient(170deg, rgb(245, 16, 16) 36%, #FFC107 103%);
+    }
+    header .navbar .navbar-nav .nav-link{
     font-size: 30px;
     margin-left: 20px;
     text-transform: capitalize;
     font-weight: 700;
     letter-spacing: 0.9px;
-    text-shadow: 1px 3px #e6d9d9;
-}
-header .navbar .navbar-nav .nav-link:hover{
+    color: #fff;
+    line-height: 1em;
+    }
+    header .navbar .navbar-nav .nav-link:hover{
     text-shadow: 1px 0px #e6d9d9;
     color: #0e0bce !important;
-
-
-}
-header .navbar .navbar-nav .nav-link:hover{
+    }
+    header .navbar .navbar-nav .nav-link:hover{
     color: transparent;
-
-}
-.about-us{
+    }
+    .about-us{
     margin: 20px 0px 30px 0px;
-
-    
-}
-.about-us h1{
+    }
+    .about-us h1{
     font-size: 70px;
     font-weight: bold;
     margin-bottom: 15px;
     color: #ef3d08;
-
-
-}
-.about-us p{
+    }
+    .about-us p{
     font-size: 25px;
     text-transform: capitalize;
     letter-spacing: 0.5px;
     text-align: center;
     color: #0c0505;
     font-weight: 500;
-}
-.about-us a{
+    }
+    .about-us a{
     font-size: 25px;
     background: red;
     color: #fff;
@@ -78,9 +74,8 @@ header .navbar .navbar-nav .nav-link:hover{
     padding: 10px 20px;
     border-radius: 4px;
     text-decoration: none;
-}
-
-.form .form-bx button {
+    }
+    .form .form-bx button {
     font-size: 30px;
     font-weight: 700;
     color: red !important;
@@ -90,61 +85,60 @@ header .navbar .navbar-nav .nav-link:hover{
     padding: 5px 20px;
     border-radius: 4px;
     margin-top: 30px;
-
-}
-.page {
+    }
+    .page {
     margin: 70px 0px 0px 0px;
     padding: 30px 0px;
     text-align: center;
     background: #bb2a2a4d;
-
-}
-
-.page .page-bx i{
+    }
+    .page .page-bx i{
     font-size: 150px;
     text-align: center;
-    
-}
-
-.page .page-bx h1{
+    }
+    .page .page-bx:hover i{
+    color: #9C27B0;
+    }
+    .page .page-bx h1{
     font-size: 50px;
     margin: 20px 0px 20px 0px;
-    
-}
-.page .page-bx h2{
-    font-size: 50px;
-
-    
-}
-
-
-.scroll-btn {
+    }
+    .page .page-bx:hover h1{
+    color: #0120fb;
+    }
+    .page .page-bx:hover h2{
+    color: red;
+    }
+    .page .page-bx h2{
+    font-size: 50px;   
+    }
+    .scroll-btn {
     position: fixed;
-    bottom: 30px;
+    bottom: 40px;
     right: 0px;
-    width: 50px;
     display: none;
-}
-
-.create-password{
-	visibility: hidden;
-}
-footer {
+    }
+    .message,
+    .create-password{
+    color: red;
+    }
+    footer {
     background: #000;
     padding: 30px 0px;
-}
-footer .foter-bx h2 {
+    background:url(footer-img.jpg);
+    background-attachment: fixed;
+    }
+    footer .foter-bx h2 {
     font-size: 30px;
     color: #fff;
     font-weight: bold;
     margin-bottom: 20px;
-}
-footer .foter-bx ul li {
+    }
+    footer .foter-bx ul li {
     list-style: none;
     line-height: 2.5em;
-
-}
-footer .foter-bx ul li a {
+    }
+    footer .foter-bx ul li a {
     list-style: none;
     text-decoration: none;
     line-height: 2em;
@@ -154,28 +148,52 @@ footer .foter-bx ul li a {
     font-weight: 500;
     margin-left: 10px;
     letter-spacing: 0.5px;
-
-}
-
-footer .foter-bx ul li i {
+    }
+    footer .foter-bx ul li i {
     color: #abacca;
     font-size: 21px;
     text-align: center;
-}
-footer .foter-bx ul li a:hover {
+    }
+    footer .foter-bx ul li a:hover {
     color: red;
-}
-footer .foter-bx ul li i:hover {
+    }
+    footer .foter-bx ul li i:hover {
     color: red;
-}
-
-
-.form-left {
-    padding: 20px 0px;
-}
-@media only screen and (max-width: 767px) {
-.about-us .d-sm-none {
-       display: none !important;
-
-}
-}
+    }
+    .form-bx button {
+    font-size: 20px;
+    text-transform: capitalize;
+    background: red;
+    color: #fff;
+    outline: navajowhite;
+    border: 0px;
+    border-radius: 4px;
+    padding: 6px 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    }
+    .form-bx button:hover {color: red;
+    background-color: #131111;
+    font-weight: 600;
+    }
+    .form-bx label {
+    font-size: 20px;
+    font-weight: 500;
+    color: #101010;
+    }
+    .form-left {
+    padding: 0px 0px;
+    }
+    @media only screen and (min-width:768px){
+    .destop-hide{
+    display:none !important;
+    }
+    }
+    @media only screen and (max-width:767px){
+    .phone-hide{
+    display:none !important;
+    }
+    .form-bx .maps iframe {
+    height: 400px;
+    }
+    }
