@@ -195,5 +195,8 @@ body{
     }
     .form-bx .maps iframe {
     height: 400px;
-    }
+    }    
+     .scroll-btn {
+    width: 40px;
+        }
     }
