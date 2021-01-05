@@ -568,10 +568,27 @@ footer .foter-bx ul li i:hover {
   .carousel .carousel-indicators li.active {
     margin-top: -15px;
   }
+    .about-us .about-right {
+      margin-top: 20px;
+    }
+
+  .about-us .about-right p {
+    padding: 0;
+    border: 0;
+}
 
   .web-development {
     padding: 50px 0px;
   }
+  .web-development .card-body h3 {
+    font-size: 20px;
+    padding: 10px 5px;
+    display: block;
+}
+  .web-development .card-body p {
+    padding: 0;
+    border: 0;
+}
 
   .contact .form-left {
     margin-bottom: 50px;
@@ -586,4 +603,3 @@ footer .foter-bx ul li i:hover {
     display: block;
   }
 }
-  
