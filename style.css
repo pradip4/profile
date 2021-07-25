@@ -1,15 +1,19 @@
 body {
   font-family: 'Space Grotesk', sans-serif;
-  cursor: url(pradip-cursor.png), auto;
+  cursor: url(pradip3.png), auto;
 }
 
-#home,
-      #projectid,
-      #formid,
-      #websiteid,
-      #aboutid,
-      html {
+#home, #projectid, #formid, #websiteid, #aboutid, html {
   scroll-behavior: smooth;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 * {
@@ -33,18 +37,74 @@ marquee {
   margin-bottom: -6px;
   border-bottom: 5px solid;
 }
-      /* Start header css */
-header {
-  background-image: linear-gradient(#4c3899, #d70e4f, green);
-  padding: 20px 0;
-  position: relative;
+
+/* Start header css */
+
+.top_header {
+  background: #000;
+  padding: 0 15px;
 }
 
-header .phone-hide {
+.top_header .left {
+  float: left;
+}
+
+.top_header p {
+  margin: 0;
+}
+
+.top_header p a {
+  font-size: 18px;
+  color: #fff;
+  padding: 15px 0;
+  display: block;
+  letter-spacing: 0.4px;
+}
+
+.top_header p a i {
+  margin-right: 10px;
+}
+
+.top_header p a:hover {
+  text-decoration: none;
+  color: red;
+}
+
+.top_header .right {
+  float: right;
+}
+
+.btn_header {
+  background-image: linear-gradient(#4c3899, #d70e4f, green);
+  position: relative;
+  padding: 0 15px;
+  font-family: 'Black Ops One', cursive;
+}
+
+.btn_header .navbar {
+  padding: 0;
+}
+
+.btn_header .navbar-light .navbar-toggler {
+  background: #fff;
+  outline: none;
+  border: 2px solid #0809ec;
+}
+
+.btn_header .navbar-light .navbar-toggler-icon {
+  width: 2em;
+  height: 2.5em;
+}
+
+.btn_header .phone-hide {
   position: absolute;
 }
 
-header .navbar .navbar-nav .nav-link {
+.btn_header .navbar .navbar-nav .nav-item {
+  position: relative;
+}
+
+.btn_header .navbar .navbar-nav .nav-link {
   font-size: 24px;
   margin-left: 30px;
   text-transform: uppercase;
@@ -52,20 +112,64 @@ header .navbar .navbar-nav .nav-link {
   letter-spacing: 0.5px;
   color: #fff;
   line-height: 1em;
-  border-bottom: 2px solid #fff;
-  padding: 10px 0;
-  border-bottom: 2px solid transparent;
+  padding: 40px 0;
+  position: relative;
 }
 
-header .navbar .navbar-nav .nav-link:hover {
-  text-shadow: 1px 0px #e6d9d9;
-  color: #000 !important;
-  border-color: #fff;
-  border-bottom-style: dashed;
+.btn_header li button:after, .btn_header li button:before, .btn_header .navbar .navbar-nav .nav-item .nav-link:after, .btn_header .navbar .navbar-nav .nav-item .nav-link:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  top: 25%;
+  transition: .5s;
 }
 
-header .navbar .navbar-nav .nav-link:hover {
+.btn_header li button:after, .btn_header .navbar .navbar-nav .nav-item .nav-link:after {
+  top: auto;
+  bottom: 25%;
+}
+
+.btn_header li button:hover:after, .btn_header li button:hover:before, .btn_header .navbar .navbar-nav .nav-item:hover .nav-link:after, .btn_header .navbar .navbar-nav .nav-item:hover .nav-link:before {
+  width: 100%;
+  transition: all .5s;
+}
+
+.btn_header .navbar .navbar-nav .nav-link:hover {
+  color: #f7fb08 !important;
+}
+
+.btn_header .navbar .navbar-nav .nav-link:hover {
   color: transparent;
+}
+
+.btn_header .navbar .navbar-nav .nav-item ol {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  z-index: 1;
+  background: #000;
+  color: #fff;
+  padding: 8px 30px;
+  box-sizing: border-box;
+  transition: .5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.btn_header .navbar .navbar-nav .nav-item ol li a {
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.btn_header .navbar .navbar-nav .nav-item:hover ol {
+  top: 104px;
+  opacity: 1;
+  visibility: visible;
 }
 
 .carousel-item img {
@@ -73,11 +177,164 @@ header .navbar .navbar-nav .nav-link:hover {
   height: 600px;
   object-fit: cover;
 }
-  
-      /* End Header css */
-  
-  
-      /* Start Banner css */
+
+/* End Header css */
+
+/* Start login form css */
+
+.Login_form input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+header li button {
+  color: white;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  font-size: 24px;
+  margin-left: 30px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 1em;
+  padding: 40px 0;
+  border: 0;
+  position: relative;
+}
+
+header li button:focus {
+  outline: none;
+  padding: 40px 10px;
+  box-shadow: inset 0px 0px 10px 6px #ccb3ba;
+  color: #f7fb00;
+  border-radius: 3px;
+  border: 0px;
+}
+
+header li button:hover {
+  color: #f7fb08;
+  border-color: #fff;
+  border-bottom-style: dashed;
+}
+
+.Login_form button:hover {
+  opacity: 0.8;
+}
+
+.Login_form h1 {
+  text-shadow: 2px 2px 0px black, 15px 15px 9em blue, 6px 4px 1em darkblue;
+  text-align: center;
+  color: #ffebcd;
+  text-transform: uppercase;
+  padding: 20px;
+  font-size: 40px;
+}
+
+.Login_form button {
+  border: 0;
+  background: #000;
+  color: #fff;
+  padding: 10px;
+  width: 150px;
+  border-radius: 2px;
+  margin-right: 10px;
+  box-shadow: inset 0px 0px 25px 0px #fff;
+}
+
+.Login_form .cancelbtn {
+  width: auto;
+  padding: 10px;
+  background-color: #f44336;
+  width: 150px;
+}
+
+.Login_form .imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.Login_form .avatar {
+  width: 200px;
+  border-radius: 50%;
+  background: url(pradip1.jpg);
+  height: 200px;
+  background-size: cover;
+  display: block;
+  margin: auto;
+  border: 0;
+  background-repeat: no-repeat;
+}
+
+.Login_form .container {
+  padding: 16px;
+}
+
+.Login_form span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.Login_form.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 10px;
+}
+
+.Login_form .modal-content {
+  background-color: #fefefe;
+  margin: 0 auto;
+  width: 55%;
+}
+
+.Login_form .close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.Login_form .close:hover, .Login_form .close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+/* End login form css */
+
+/* Start Banner css */
+
+.carousel {
+  z-index: 0;
+}
+
 .carousel .carousel-indicators {
   bottom: -10px;
 }
@@ -120,9 +377,12 @@ header .navbar .navbar-nav .nav-link:hover {
   border-radius: 50%;
   border: 2px solid #fff;
 }
-  /* Start About css */
+
+/* Start About css */
+
 .about-us {
-  margin: 20px 0px 30px 0px;
+  background: #f1ebeb;
+  padding: 40px 0;
 }
 
 .about-us .about-right h1 {
@@ -166,8 +426,7 @@ header .navbar .navbar-nav .nav-link:hover {
 
 .about-us .about-right:hover h1 {
   color: #000000;
-  border-color: #000000
-    transition: .7s;
+  border-color: #000000 transition: .7s;
 }
 
 .about-us .about-right:hover p {
@@ -180,11 +439,11 @@ header .navbar .navbar-nav .nav-link:hover {
   color: #ffffff;
   transition: .7s;
 }
-  
-      /* End About css */
-  
-  
-      /* Start Website Development css */
+
+/* End About css */
+
+/* Start Website Development css */
+
 .web-development {
   background: #0811e2;
   padding: 50px 15px;
@@ -215,6 +474,7 @@ header .navbar .navbar-nav .nav-link:hover {
   position: relative;
   box-shadow: -1px -12px 25px 16px rgba(12, 9, 9, 0.1);
   border-radius: 5px;
+  z-index: 0;
 }
 
 .web-development .card-body h3 {
@@ -290,9 +550,11 @@ header .navbar .navbar-nav .nav-link:hover {
   background-color: transparent;
   transition: 5.5s;
 }
-      /* End Website Devlopment css */
-  
-      /* Start Contact Form css */
+
+/* End Website Devlopment css */
+
+/* Start Contact Form css */
+
 .contact {
   text-align: center;
   padding: 50px 0;
@@ -314,8 +576,7 @@ header .navbar .navbar-nav .nav-link:hover {
   text-align: left;
 }
 
-.form-group textarea,
-.form-group input::placeholder {
+.form-group textarea, .form-group input::placeholder {
   color: red;
   font-size: 15px;
   font-weight: 500;
@@ -356,11 +617,103 @@ header .navbar .navbar-nav .nav-link:hover {
 .form-left {
   padding: 0px 0px;
 }
-          /* End Contact Form css */
-  
-              /* Start User css */
-  
-  
+
+/* End Contact Form css */
+
+/* Start Slick css */
+
+.my_skills {
+  text-align: center;
+  margin-bottom: -16px;
+  padding: 50px 0;
+  background: #f1ebeb;
+}
+
+.my_skills h1 {
+  color: #000;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
+.my_skills .regular {
+  width: 86%;
+  margin: auto;
+  position: relative;
+}
+
+.my_skills .slick-slide .slick_txt {
+  background: red;
+  padding: 30px 10px;
+}
+
+.my_skills .slick-slide:nth-child(2n) .slick_txt {
+  background: #000;
+}
+
+.my_skills .slick-slide .slick_txt a {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  text-shadow: 2px -2px #0508f9;
+}
+
+.my_skills button.slick-arrow {
+  position: absolute;
+  left: -7%;
+  width: 7%;
+  border: 0;
+  font-size: 0;
+  top: 0px;
+  outline: none;
+  background: red;
+  padding: 30px 10px;
+  border-right: 1px solid #fff;
+}
+
+.my_skills button.slick-next {
+  left: auto;
+  right: -81px;
+  border-right: 0px;
+  border-left: 1px solid #fff;
+}
+
+.my_skills button.slick-arrow:before {
+  content: "\f060";
+  font-family: 'FontAwesome';
+  color: #fff;
+  font-size: 18px;
+}
+
+.my_skills button.slick-next:before {
+  content: "\f061";
+}
+
+.my_skills ul.slick-dots {
+  display: flex !important;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.my_skills ul.slick-dots li {
+  list-style: none;
+}
+
+.my_skills ul.slick-dots li button {
+  padding: 0px 7px;
+  margin: 0 2px;
+  font-size: 12px;
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+  outline: none;
+  border-radius: 2px;
+}
+
+/* End Slick css */
+
+/* Start User css */
+
 .page {
   text-align: center;
   background: red;
@@ -371,7 +724,7 @@ header .navbar .navbar-nav .nav-link:hover {
   background-color: blue;
 }
 
-.page > h1 {
+.page>h1 {
   text-align: center;
   margin-bottom: 40px;
   font-size: 40px;
@@ -395,13 +748,13 @@ header .navbar .navbar-nav .nav-link:hover {
 
 .page .page-bx:hover {
   background-color: #ffffff;
-  border-color: #130505
-        transition: .5s;
+  border-color: #130505 transition: .5s;
 }
 
 .page .page-bx i {
   font-size: 150px;
   text-align: center;
+  color: #000;
 }
 
 .page .page-bx:hover i {
@@ -431,9 +784,9 @@ header .navbar .navbar-nav .nav-link:hover {
   font-size: 50px;
   color: #ffffff;
 }
-  
-          /* End User css */
-  
+
+/* End User css */
+
 .scroll-btn {
   position: fixed;
   bottom: 40px;
@@ -446,20 +799,22 @@ header .navbar .navbar-nav .nav-link:hover {
   height: 130px;
 }
 
-.message,
-      .create-password {
+.message, .create-password {
   color: red;
 }
-  
-  
-          /* Start Footer css */
-  
+
+/* Start Footer css */
+
 footer {
-  background: #000;
-  padding: 50px 0px;
+  width: 100%;
+  height: 100%;
+  padding: 50px 15px;
   background: url(footer-img.jpg);
   background-attachment: fixed;
   text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 footer h1 {
@@ -472,6 +827,7 @@ footer h1 {
   display: inline-block;
   text-transform: uppercase;
   padding: 0 15px;
+  position: relative;
 }
 
 footer .foter-bx {
@@ -496,19 +852,19 @@ footer .foter-bx h2 {
 
 footer .foter-bx ul li {
   list-style: none;
-  line-height: 2.5em;
 }
 
 footer .foter-bx ul li a {
   list-style: none;
   text-decoration: none;
-  line-height: 2em;
   font-size: 18px;
   color: #e8dada;
   text-transform: capitalize;
   font-weight: 500;
   margin-left: 10px;
   letter-spacing: 0.5px;
+  padding: 3px 0px;
+  display: inline-block;
 }
 
 footer .foter-bx ul li i {
@@ -524,16 +880,57 @@ footer .foter-bx ul li a:hover {
 footer .foter-bx ul li i:hover {
   color: red;
 }
-  
-  
-          /* End Footer css */
-  
-  
-          /* Start Responsive css */
-  
+
+footer .more_dropdown {
+  display: none;
+}
+
+footer .foter-bx li.more_btn a {
+  background: #f30829;
+  border-radius: 4px;
+  margin: 10px 10px;
+  padding: 8px 40px;
+  box-shadow: inset 0px 0px 10px 6px #ccb3ba;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+footer .foter-bx li.more_btn a:hover {
+  color: #0af911;
+}
+
+/* End Footer css */
+
+/* Start Responsive css */
+
 @media only screen and (min-width:768px) {
   .destop-hide {
     display: none !important;
+  }
+}
+
+@media only screen and (min-width:768px) and (max-width:768px) {
+  .carousel-item img {
+    height: 460px;
+  }
+  .about-us .about-right h1 {
+    font-size: 60px;
+  }
+  .about-us .about-right p {
+    font-size: 16px;
+    padding: 0 5px;
+  }
+  .about-us .about-right a {
+    font-size: 15px;
+  }
+  .web-development .row .col-md-6:last-child {
+    display: none;
+  }
+  .page .page-bx h1 {
+    font-size: 40px;
+  }
+  .page .page-bx h2 {
+    font-size: 40px;
   }
 }
 
@@ -541,66 +938,77 @@ footer .foter-bx ul li i:hover {
   .container-fluid {
     padding: 0 !important;
   }
-
+  header {
+    padding: 0;
+  }
   .phone-hide {
     display: none !important;
   }
-
+  .carousel a span {
+    visibility: hidden;
+  }
+  .carousel .carousel-indicators li {
+    width: 40px;
+    height: 40px;
+  }
   .carousel-item img {
     height: 200px;
   }
-
+  .carousel .carousel-indicators {
+    bottom: -16px;
+  }
   .form-bx .maps iframe {
     height: 400px;
   }
-
   .scroll-btn {
     width: 40px;
+    right: 15px;
   }
-
   .carousel a span:before {
     width: 60px;
     height: 60px;
     top: -20px;
     left: -20px;
   }
-
   .carousel .carousel-indicators li.active {
-    margin-top: -15px;
+    margin-top: -10px;
   }
-    .about-us .about-right {
-      margin-top: 20px;
-    }
-
+  .about-us .about-right {
+    margin-top: 20px;
+  }
   .about-us .about-right p {
     padding: 0;
     border: 0;
-}
-
+  }
   .web-development {
-    padding: 50px 0px;
+    padding: 40px 0px;
+  }
+  .web-development .row {
+    margin: 0;
+  }
+  .web-development h1 {
+    font-size: 35px;
+    display: block;
+    margin-bottom: 40px;
+    line-height: 50px;
   }
   .web-development .card-body h3 {
     font-size: 20px;
     padding: 10px 5px;
     display: block;
-}
+  }
   .web-development .card-body p {
     padding: 0;
     border: 0;
-}
-
+  }
   .contact .form-left {
     margin-bottom: 50px;
   }
-
   footer h1 {
     display: block;
   }
-
   footer .foter-bx h2 {
     text-align: center;
     display: block;
   }
 }
-

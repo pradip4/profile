@@ -57,3 +57,36 @@ $(document).ready(function () {
   document.getElementsByClassName("form-control")[2].value="";
   }
   }
+
+
+  $(document).on('ready', function() {
+    $(".regular").slick({
+      dots: true,
+      infinite: true,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      responsive: [
+  {
+    breakpoint: 1025,
+    settings: {
+      centerMode: true,
+      slidesToShow:2
+    }
+  },
+]
+
+    });
+
+    $(".more_btn").click (function(){
+      $(".more_dropdown").toggle();
+    });
+   
+  });
+
+
+
+  // $(document).ready(function(){
+  //   $(".more_btn").click(function(){
+  //     $(".more_dropdown").toggle();
+  //   });
+  // });

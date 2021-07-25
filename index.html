@@ -1,224 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Welcome To Pradip Portfolio</title>
-      <link href="style.css" rel="stylesheet" type="text/css">
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-      <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
-      <script src="javascript.js" type="text/javascript"></script>
-      <style>
-         img {
-  max-width: 100%;
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>learning</title>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" type="text/css" href="slick.css">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+   <link href="style.css" rel="stylesheet" type="text/css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
+   <!-- <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script> -->
+   <script src="slick.js" type="text/javascript" charset="utf-8"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+   <script src="javascript.js" type="text/javascript"></script>
+   <script>
+      
+      $(window).scroll(function() {
+  var sticky = $('.btn_header'),
+    scroll = $(window).scrollTop();
+
+  if (scroll >= 160) sticky.addClass('btn_header_fixed');
+  else sticky.removeClass('btn_header_fixed');
+});
+   </script>
+
+   <style>
+      /* .scroll-btn,
+      footer,
+      .page,
+      .my_skills,
+      .contact,
+      .web-development,
+      .about-us,
+      .carousel {
+         display: none;
+      } */
+
+
+
+
+.btn_header_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: smoothScroll 2s forwards;
+  width: 100%;
+  z-index: 1;
+      box-shadow: -1px 0px 20px #403b3b;
+    background-image: repeating-linear-gradient(30deg,#4c3899,#d70e4f 6%,#d20eabf5 7%);
 }
-      </style>
-<script>
-  //alert("PRADIP KUMAR PRABHAKAR MOBILE NO:- 82 27 94 68 69");
-</script>
-   </head>
-   <body id="body-top">
-      <!--Header Top Start-->
-      <marquee direction="left" class="d-md-none">
+@keyframes smoothScroll {
+   0% {
+      transform: translateY(-104px);
+   }
+   100% {
+      transform: translateY(0px);
+   }
+}
+   </style>
+
+</head>
+
+<body id="body-top">
+   <!--Header Top Start-->
+   <marquee direction="left" class="d-md-none">
       <img src="pradip-banner.png">
-      </marquee direction="left">
-      <!--Header Top End-->
-      <!--This is a header start-->
-      <header>
-         <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-light">
-               <a class="navbar-brand destop-hide" href="#"><img src="pradip-kumar.png" width="80px"></a>
-               <a class="navbar-brand phone-hide" href="#"><img src="pradip-kumar.png" style="width: 100px;"></a>
-               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ml-auto">
-                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="">Home <span class="sr-only">(current)</span></a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#projectid">project</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#aboutid">About</a>
-                     </li>
-
-                     <li class="nav-item">
-                        <a class="nav-link" href="#websiteid">Website</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#formid">Contact Us</a>
-                     </li>
-                  </ul>
-               </div>
-            </nav>
+   </marquee direction="left">
+   <!--Header Top End-->
+   <!--This is a header start-->
+   <div class="top_header">
+      <div class="container-fluid">
+         <div class="left">
+            <p><a href="mailto:web4pradip@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i>web4pradip@gmail.com</a></p>
          </div>
-      </header>
-      <!--This is a header End-->
-      <!--This is a Banner start-->
-<div id="demo" class="carousel slide" data-ride="carousel">
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"><img src="banner2.jpg" alt="Los Angeles"></li>
-    <li data-target="#demo" data-slide-to="1"><img src="banner1.jpg" alt="Chicago"></li>
-    <li data-target="#demo" data-slide-to="2"><img src="banner2.jpg" alt="Los Angeles"></li>
-    <li data-target="#demo" data-slide-to="3"><img src="banner.jpg" alt="New York"></li>
 
-  </ul>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="banner2.jpg" alt="Los Angeles">
-      <div class="carousel-caption">
-        <h3></h3>
-        <p></p>
-      </div>   
-    </div>
-    <div class="carousel-item">
-      <img src="banner1.jpg" alt="Chicago">
-      <div class="carousel-caption">
-        <h3></h3>
-        <p></p>
-      </div>   
-    </div>
+         <div class="right">
+            <p>
+               <a href="tel:8227946869"><i class="fa fa-phone" aria-hidden="true"></i>8227946869</a>
+            </p>
+         </div>
+         <div class="clr"></div>
+      </div>
+   </div>
+   <header class="btn_header">
+      <div class="container-fluid">
+         <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand destop-hide" href="#"><img src="pradip-kumar.png" width="75px"></a>
+            <a class="navbar-brand phone-hide" href="#"><img src="pradip-kumar.png" style="width: 100px;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="#" id="">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#projectid">project</a>
+                     <ol>
+                        <li>
+                           <a href="https://www.greenedgetech.com.au/" target="_blank">greenedgetech.com</a>
+                        </li>
+                        <li>
+                           <a href="https://www.shopndesign.com/" target="_blank">shopndesign.com</a>
+                        </li>
 
-    <div class="carousel-item">
-      <img src="banner2.jpg" alt="Los Angeles">
-      <div class="carousel-caption">
-        <h3></h3>
-        <p></p>
-      </div>   
-    </div>
-    <div class="carousel-item">
-      <img src="banner.jpg" alt="New York">
-      <div class="carousel-caption">
-        <h3></h3>
-        <p></p>
-      </div>   
-    </div>
-
-
-  </div>
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-</div>
+                        <li>
+                           <a href="https://playandgo.com/" target="_blank">playandgo.com</a>
+                        </li>
+                        <li>
+                           <a href="https://dealers.bullbbq.com/" target="_blank">dealers.bullbbq.com</a>
+                        </li>
+                        <li>
+                           <a href="https://usanimo.com/" target="_blank">usanimo.com</a>
+                        </li>
+                        <li>
+                           <a href="https://www.bosterbio.com/" target="_blank">bosterbio.com</a>
+                        </li>
 
 
-<!-- 
+                        <li>
+                           <a href="https://www.foscam.it/" target="_blank">foscam.it</a>
+                        </li>
+                        <li>
+                           <a href="https://www.lookathome.it/" target="_blank">lookathome.it</a>
+                        </li>
+
+                  </li>
+
+                  </li>
+                  <li>
+                     <a href="https://www.bullbbq.com/" target="_blank">bullbbq.com</a>
+                  </li>
+                  </li>
+                  <li>
+                     <a href="https://www.everydayminerals.com/" target="_blank">everydayminerals.com</a>
+                  </li>
+
+                  </ol>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#aboutid">About</a>
+                  </li>
+
+                  <li class="nav-item">
+                     <a class="nav-link" href="#websiteid">Website
+
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#formid">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+                     <button onclick="document.getElementById('id01').style.display='block'">Login</button>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+   </header>
+
+
+   <!-- <button onclick="document.getElementById('id01').style.display='block'">Login</button> -->
+
+   <div id="id01" class="Login_form modal">
+
+      <form class="modal-content animate" action="/action_page.php" method="post">
+         <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+               title="Close Modal">&times;</span>
+            <h1>UI Developer:-Pradip Kumar</h1>
+
+            <!-- <img src="pradip11.jpg" alt="Avatar" class="avatar"> -->
+            <div class="avatar"></div>
+         </div>
+
+
+         <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Login</button>
+            <label>
+               <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+         </div>
+
+         <div class="container">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'"
+               class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+         </div>
+      </form>
+   </div>
+
+   <script>
+      // Get the modal
+      var modal = document.getElementById('id01');
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+         if (event.target == modal) {
+            modal.style.display = "none";
+         }
+      }
+   </script>
+   <!--This is a header End-->
+   <!--This is a Banner start-->
+   <div id="demo" class="carousel slide" data-ride="carousel">
+      <ul class="carousel-indicators">
+         <li data-target="#demo" data-slide-to="0" class="active"><img src="banner2.jpg" alt="Los Angeles"></li>
+         <li data-target="#demo" data-slide-to="1"><img src="banner1.jpg" alt="Chicago"></li>
+         <li data-target="#demo" data-slide-to="2"><img src="banner2.jpg" alt="Los Angeles"></li>
+         <li data-target="#demo" data-slide-to="3"><img src="banner.jpg" alt="New York"></li>
+
+      </ul>
+      <div class="carousel-inner">
+         <div class="carousel-item active">
+            <img src="banner2.jpg" alt="Los Angeles">
+            <div class="carousel-caption">
+               <h3></h3>
+               <p></p>
+            </div>
+         </div>
+         <div class="carousel-item">
+            <img src="banner1.jpg" alt="Chicago">
+            <div class="carousel-caption">
+               <h3></h3>
+               <p></p>
+            </div>
+         </div>
+
+         <div class="carousel-item">
+            <img src="banner2.jpg" alt="Los Angeles">
+            <div class="carousel-caption">
+               <h3></h3>
+               <p></p>
+            </div>
+         </div>
+         <div class="carousel-item">
+            <img src="banner.jpg" alt="New York">
+            <div class="carousel-caption">
+               <h3></h3>
+               <p></p>
+            </div>
+         </div>
+
+
+      </div>
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+         <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+         <span class="carousel-control-next-icon"></span>
+      </a>
+   </div>
+
+
+   <!-- 
       <div class="banner">
          <img src="banner.jpg">
       </div> -->
-      <!--This is a Banner End-->
-      <!--This is a About-Us start-->
-      <div class="about-us" id="aboutid">
-         <div class="container">
-            <div class="row">
-               <div class="col-sm-12 col-md-6 d-md-none">
-                  <div class="about-img">
-                     <div class="image">
-                        <img src="pradip1.jpg" alt="pradip kumar">
-                     </div>
+   <!--This is a Banner End-->
+   <!--This is a About-Us start-->
+   <div class="about-us" id="aboutid">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-12 col-md-6 d-md-none">
+               <div class="about-img">
+                  <div class="image">
+                     <img src="pradip1.jpg" alt="pradip kumar">
                   </div>
                </div>
-               <div class="col-sm-12 col-md-6 about-image phone-hide">
-                  <div class="about-img">
-                     <div class="image">
-                        <img src="book.png" alt="pradip kumar">
-                     </div>
+            </div>
+            
+            <div class="col-sm-12 col-md-6 about-image phone-hide">
+               <div class="about-img">
+                  <div class="image">
+                     <img src="book.png" alt="pradip kumar">
                   </div>
                </div>
-               <div class="col-sm-12 col-md-6 m-auto text-center">
-                  <div class="about-right">
-                     <h1>
-                        About
-                     </h1>
-                     <p>
-                       I am a User Interface Developer,i live in Delhi,i am working HTML5, CSS3, BOOSTRAP, JAVASCRIPT JQUERY,MAGENTO RESPONSIVE WEB DESIGN PHOTOSHOP Fast learning skill.
-                     </p>
-                     <a href="Updated- CV.docx">Download my Resume</a>
-                  </div>
+            </div>
+            <div class="col-sm-12 col-md-6 m-auto text-center">
+               <div class="about-right">
+                  <h1>
+                     About
+                  </h1>
+                  <p>
+                     I am a User Interface Developer,i live in Delhi,i am working HTML5, CSS3, LESS, SASS, BOOSTRAP,
+                     JAVASCRIPT
+                     JQUERY,MAGENTO RESPONSIVE WEB DESIGN PHOTOSHOP Fast learning skill.
+                  </p>
+                  <a href="Updated- CV.pdf">Download my Resume</a>
                </div>
             </div>
          </div>
       </div>
-      <!--This is a About-us End-->
+   </div>
+   <!--This is a About-us End-->
 
-      <!--Website Development Start-->
-      <section class="web-development" id="websiteid">
-         <h1 class="">WEBSITE DEVELOPMENT</h1>
+   <!--Website Development Start-->
+   <section class="web-development" id="websiteid">
+      <h1 class="">WEBSITE DEVELOPMENT</h1>
 
-         <div class="container-fluid">
-           <div class="row">
-             <div class="col-lg-4 col-md-6 col-10 m-auto">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-lg-4 col-md-6 col-12 m-auto">
                <div class="card-body bg-white mb-3">
-                 <h3 class="">WEBSITE DEVELOPMENT</h3>
-                 <p>I am a User Interface Developer, my role is to develop website using PSD to HTML conversion, Photoshop, Dreamweaver,Visual Studio code,Sublime Text, HTML5, CSS3, Bootstrap, Javascript, Jquery, Magento Responsive Website development Fast Learning Skill.</p>
-                 <a href="#" class="btn btn-primary float-right">Read More</a>
-                 <div class="clr"></div>
+                  <h3 class="">WEBSITE DEVELOPMENT</h3>
+                  <p>I am a User Interface Developer, my role is to develop website using PSD to HTML conversion,
+                     Photoshop, Dreamweaver,Visual Studio code,Sublime Text, HTML5, CSS3, LESS, SASS, Bootstrap,
+                     Javascript, Jquery,
+                     Magento Responsive Website development Fast Learning Skill.</p>
+                  <a href="#" class="btn btn-primary float-right">Read More</a>
+                  <div class="clr"></div>
                </div>
-             </div>
-             <div class="col-lg-4 col-md-6 col-10 m-auto">
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 m-auto">
                <div class="card-body bg-white mb-3">
-                 <h3 class="">WEBSITE DEVELOPMENT</h3>
-                 <p>I am a User Interface Developer, my role is to develop website using PSD to HTML conversion, Photoshop, Dreamweaver,Visual Studio code,Sublime Text, HTML5, CSS3, Bootstrap, Javascript, Jquery, Magento Responsive Website development Fast Learning Skill.</p>
-                 <a href="#" class="btn btn-primary float-right">Read More</a>
-                 <div class="clr"></div>
+                  <h3 class="">WEBSITE DEVELOPMENT</h3>
+                  <p>I am a User Interface Developer, my role is to develop website using PSD to HTML conversion,
+                     Photoshop, Dreamweaver,Visual Studio code,Sublime Text, HTML5, CSS3, LESS, SASS, Bootstrap,
+                     Javascript, Jquery,
+                     Magento Responsive Website development Fast Learning Skill.</p>
+                  <a href="#" class="btn btn-primary float-right">Read More</a>
+                  <div class="clr"></div>
                </div>
-             </div>
-             <div class="col-lg-4 col-md-6 col-10 m-auto">
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 m-auto">
                <div class="card-body bg-white mb-3">
-                 <h3 class="">WEBSITE DEVELOPMENT</h3>
-                 <p>I am a User Interface Developer, my role is to develop website using PSD to HTML conversion, Photoshop, Dreamweaver,Visual Studio code,Sublime Text, HTML5, CSS3, Bootstrap, Javascript, Jquery, Magento Responsive Website development Fast Learning Skill.</p>
-                 <a href="#" class="btn btn-primary float-right">Read More</a>
-                 <div class="clr"></div>
+                  <h3 class="">WEBSITE DEVELOPMENT</h3>
+                  <p>I am a User Interface Developer, my role is to develop website using PSD to HTML conversion,
+                     Photoshop, Dreamweaver,Visual Studio code,Sublime Text, HTML5, CSS3, LESS, SASS, Bootstrap,
+                     Javascript, Jquery,
+                     Magento Responsive Website development Fast Learning Skill.</p>
+                  <a href="#" class="btn btn-primary float-right">Read More</a>
+                  <div class="clr"></div>
                </div>
-             </div>
-           </div>
+            </div>
          </div>
-       </section>
-             <!--Website Development End-->
+      </div>
+   </section>
 
-      <div class="contact">
+   <!--Website Development End-->
+
+   <div class="contact">
       <div class="container">
+         <form action="mail.php" method="POST">
+
          <div class="form-bx" id="formid">
             <h1 class="text-center">Contact Us</h1>
             <div class="row">
                <div class="col-sm-12 col-md-6 col-lg-6 form-left">
                   <div class="form-group">
                      <label>Name</label>
-                     <input type="text" value="" name="" placeholder="Pradip Kumar" class="form-control" id="name">
+                     <input type="text" value="" name="name" placeholder="Pradip Kumar" class="form-control" id="name">
                      <span class="create-password" id="one" text-danger></span>
                   </div>
                   <div class="form-group">
                      <label>Email</label>
-                     <input type="text" value="" placeholder="Web4pradip@gmail.com" name="" class="form-control" id="email">
+                     <input type="text" value="" placeholder="Web4pradip@gmail.com" name="email" class="form-control"
+                        id="email">
                      <span class="create-password" id="two" text-danger></span>
                   </div>
                   <div class="form-group">
                      <label>Phone Number</label>
-                     <input type="text" value="" placeholder="8227946869" name="" class="form-control" id="number">                <span class="create-password" id="three" text-danger></span>
+                     <input type="text" value="" placeholder="8227946869" name="phone" class="form-control" id="number">
+                     <span class="create-password" id="three" text-danger></span>
                      <span class="create-password" id="three" text-danger></span>
                   </div>
                   <div class="form-group">
                      <label>Message</label>
-                     <textarea class="w-100" style="height:6em;" id="message">Hello Mr.Pradip Ji</textarea>
+                     <textarea class="w-100" style="height:6em;" name="message" id="message">Hello Mr.Pradip Ji</textarea>
                      <span class="message" id="four" text-danger></span>
                   </div>
-                  <button type="btn btn-success" onclick="formvalidation()">Submitted</button>
+                  <button type="submit" onclick="formvalidation()">Submitted</button>
                </div>
                <div class="col-sm-12 col-md-6 col-lg-6">
                   <div class="maps">
@@ -229,162 +408,236 @@
                </div>
             </div>
          </div>
+      </form>
       </div>
-      </div>
-      <!--Page start-->
-      <div class="page">
-         <h1>User Design</h1>
-         <div class="container">
-            <div class="row">
-               <div class="col-md-4">
-                  <div class="page-bx">
-                     <div class="page-icon"><i class="fa fa-user" aria-hidden="true"></i>
-                     </div>
-                     <h1>User Logo</h1>
-                     <h2 class="counter animated fadeInDownBig">
+   </div>
+   <!--Slick slider skills start-->
+   <div class="my_skills">
+      <h1>My skills</h1>
+      <section class="regular slider">
+         <div class="slick_bx">
+            <div class="slick_img"><img src="" alt=""></div>
+            <div class="slick_txt"><a href="#">Html5</a></div>
+         </div>
+
+         <div class="slick_bx">
+            <div class="slick_img"><img src="" alt=""></div>
+            <div class="slick_txt"><a href="#">Css3</a></div>
+         </div>
+
+
+         <div class="slick_bx">
+            <div class="slick_img"><img src="" alt=""></div>
+            <div class="slick_txt"><a href="#">Less</a></div>
+         </div>
+
+
+         <div class="slick_bx">
+            <div class="slick_img"><img src="" alt=""></div>
+            <div class="slick_txt"><a href="#">Sass</a></div>
+         </div>
+
+         <div class="slick_bx">
+            <div class="slick_img"><img src="" alt=""></div>
+            <div class="slick_txt"><a href="#">Responsive</a></div>
+         </div>
+
+         <div class="slick_bx">
+            <div class="slick_img"><img src="" alt=""></div>
+            <div class="slick_txt"><a href="#">Bootstrap</a></div>
+         </div>
+
+         <div class="slick_bx">
+            <div class="slick_img"><img src="" alt=""></div>
+            <div class="slick_txt"><a href="#">Photoshoap</a></div>
+         </div>
+
+         <div class="slick_bx">
+            <div class="slick_img"><img src="" alt=""></div>
+            <div class="slick_txt"><a href="#">Javascript</a></div>
+         </div>
+
+         <div class="slick_bx">
+            <div class="slick_img"><img src="" alt=""></div>
+            <div class="slick_txt"><a href="#">jQuery</a></div>
+         </div>
+
+      </section>
+   </div>
+
+
+
+
+   <!--Slick slider skills End-->
+
+   <!--Page start-->
+   <div class="page">
+      <h1>User Design</h1>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-4">
+               <div class="page-bx">
+                  <div class="page-icon"><i class="fa fa-user" aria-hidden="true"></i>
+                  </div>
+                  <h1>User Logo</h1>
+                  <h2 class="counter animated fadeInDownBig">
                      400</h2 class="counter animated fadeInDownBig">
-                  </div>
                </div>
-               <div class="col-md-4">
-                  <div class="page-bx">
-                     <div class="page-icon"><i class="fa fa-envelope-o" aria-hidden="true"></i>
-                     </div>
-                     <h1>Message</h1>
-                     <h2 class="counter animated fadeInDownBig">600</h2>
+            </div>
+            <div class="col-md-4">
+               <div class="page-bx">
+                  <div class="page-icon"><i class="fa fa-envelope-o" aria-hidden="true"></i>
                   </div>
+                  <h1>Message</h1>
+                  <h2 class="counter animated fadeInDownBig">600</h2>
                </div>
-               <div class="col-md-4">
-                  <div class="page-bx">
-                     <div class="page-icon"><i class="fa fa-futbol-o" aria-hidden="true"></i>
-                     </div>
-                     <h1>Football</h1>
-                     <h2 class="counter animated fadeInDownBig">
+            </div>
+            <div class="col-md-4">
+               <div class="page-bx">
+                  <div class="page-icon"><i class="fa fa-futbol-o" aria-hidden="true"></i>
+                  </div>
+                  <h1>Football</h1>
+                  <h2 class="counter animated fadeInDownBig">
                      800</h2 class="counter animated fadeInDownBig">
-                  </div>
                </div>
             </div>
          </div>
       </div>
-      <!--Page End-->
-      <!--This is a Footer start-->
-      <footer>
-        <h1>Footer Design</h1>
-        <div class="overlay"></div>
-         <div class="container" id="projectid">
-            <div class="row">
-               <div class="col-sm-6 col-md-3 col-lg-3">
-                  <div class="foter-bx">
-                     <h2>Pradip Kumar</h2>
-                     <ul>
-                        <li>
-                           <i class="fa fa-map-marker" aria-hidden="true"></i>
-                           <a href="javascript:void(0)">
+   </div>
+   <!--Page End-->
+   <!--This is a Footer start-->
+   <footer>
+      <div class="overlay"></div>
+      <h1>Footer Design</h1>
+      <div class="container-fluid" id="projectid">
+         <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-4">
+               <div class="foter-bx">
+                  <h2>Pradip Kumar</h2>
+                  <ul>
+                     <li>
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <a href="javascript:void(0)">
                            South Ganesh Nagar Delhi</a>
-                        </li>
-                        <li>
-                           <i class="fa fa-phone" aria-hidden="true"></i>
-                           <a href="javascript:void(0)">
+                     </li>
+                     <li>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <a href="tel:8227946869">
                            8227946869</a>
-                        </li>
-                        <li>
-                           <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                           <a href="javascript:void(0)">
+                     </li>
+                     <li>
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <a href="mailto:web4pradip@gmail.com">
                            web4pradip@gmail.com</a>
-                        </li>
-                     </ul>
-                  </div>
+                     </li>
+                  </ul>
                </div>
-               <div class="col-sm-6 col-md-3 col-lg-3">
-                  <div class="foter-bx">
-                     <h2>Home</h2>
-                     <ul>
-                        <li>
-                           <a href="javascript:void(0)">
+            </div>
+            <div class="col-sm-6 col-md-2 col-lg-2">
+               <div class="foter-bx">
+                  <h2>Home</h2>
+                  <ul>
+                     <li>
+                        <a href="javascript:void(0)">
                            Home</a>
-                        </li>
-                        <li>
-                           <a href="javascript:void(0)">About</a>
-                        </li>
-                        <li>
-                           <a href="javascript:void(0)">Contact Us</a>
-                        </li>
-                     </ul>
-                  </div>
+                     </li>
+                     <li>
+                        <a href="javascript:void(0)">About</a>
+                     </li>
+                     <li>
+                        <a href="javascript:void(0)">Contact Us</a>
+                     </li>
+                  </ul>
                </div>
-               <div class="col-sm-6 col-md-3 col-lg-3">
-                  <div class="foter-bx">
-                     <h2>Project</h2>
-                     <ul>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-4">
+               <div class="foter-bx">
+                  <h2>Project</h2>
+                  <ul>
+                     <li>
+                        <a href="https://www.greenedgetech.com.au/" target="_blank">greenedgetech.com</a>
+                     </li>
+                     <li>
+                        <a href="https://www.shopndesign.com/" target="_blank">shopndesign.com</a>
+                     </li>
+
+                     <li>
+                        <a href="https://playandgo.com/" target="_blank">playandgo.com</a>
+                     </li>
+                     <li class="more_btn">
+                        <a href="javascript:void(0)">More Link</a>
+                     </li>
+                     <div class="more_dropdown">
                         <li>
-                           <a href="https://playandgo.com/" target="_blank">playandgo.com</a>
+                           <a href="https://dealers.bullbbq.com/" target="_blank">dealers.bullbbq.com</a>
                         </li>
-                                             <li>
-                     <a href="https://dealers.bullbbq.com/" target="_blank">dealers.bullbbq.com</a>
-                  </li>
-                                          <li>
+                        <li>
                            <a href="https://usanimo.com/" target="_blank">usanimo.com</a>
                         </li>
                         <li>
                            <a href="https://www.bosterbio.com/" target="_blank">bosterbio.com</a>
                         </li>
-                        
 
-                           <li>
+
+                        <li>
                            <a href="https://www.foscam.it/" target="_blank">foscam.it</a>
                         </li>
-                           <li>
+                        <li>
                            <a href="https://www.lookathome.it/" target="_blank">lookathome.it</a>
                         </li>
 
+                        </li>
+
+                        </li>
+                        <li>
+                           <a href="https://www.bullbbq.com/" target="_blank">bullbbq.com</a>
+                        </li>
+                        </li>
+                        <li>
+                           <a href="https://www.everydayminerals.com/" target="_blank">everydayminerals.com</a>
+                        </li>
+                     </div>
+
+                  </ul>
+               </div>
+            </div>
+            <div class="col-sm-6 col-md-2 col-lg-2">
+               <div class="foter-bx">
+                  <h2>Social</h2>
+                  <ul>
+                     <li>
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                        <a href="https://www.facebook.com/pradip.k.yadav.90">
+                           Facebook</a>
+                     </li>
+                     <li>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <a href="javascript:void(0)">
+                           instagram</a>
+                     </li>
+                     <li>
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        <a href="javascript:void(0)">
+                           youtube</a>
+                     </li>
+                     <li>
+                        <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        <a href="https://www.linkedin.com/in/pradip-kumar-112b28197/">
+                           Linkdin</a>
                      </li>
 
-               </li>
-               <li>
-               <a href="https://www.bullbbq.com/" target="_blank">bullbbq.com/</a>
-            </li>
-         </li>
-         <li>
-         <a href="https://www.everydayminerals.com/" target="_blank">everydayminerals.com</a>
-      </li>
-      
-                     </ul>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-md-3 col-lg-3">
-                  <div class="foter-bx">
-                     <h2>Social</h2>
-                     <ul>
-                        <li>
-                           <i class="fa fa-facebook" aria-hidden="true"></i>
-                           <a href="https://www.facebook.com/pradip.k.yadav.90">
-                           Facebook</a>
-                        </li>
-                        <li>
-                           <i class="fa fa-instagram" aria-hidden="true"></i>
-                           <a href="javascript:void(0)">
-                           instagram</a>
-                        </li>
-                        <li>
-                           <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                           <a href="javascript:void(0)">
-                           youtube</a>
-                        </li>
-                                                <li>
-                           <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                           <a href="https://www.linkedin.com/in/pradip-kumar-112b28197/">
-                           Linkdin</a>
-                        </li>
-
-                     </ul>
-                  </div>
+                  </ul>
                </div>
             </div>
          </div>
-         </div>
-      </footer>
-      <!--This is a Footer End-->
-      <div class="scroll-btn" id="myBtn">
-         <a href="#body-top"> <img src="pradip-arrow.gif"></a>
       </div>
-   </body>
+      </div>
+
+   </footer>
+   <!--This is a Footer End-->
+   <div class="scroll-btn" id="myBtn">
+      <a href="#body-top"> <img src="pradip-arrow.gif"></a>
+   </div>
+</body>
+
 </html>
